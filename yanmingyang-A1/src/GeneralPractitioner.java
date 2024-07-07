@@ -1,24 +1,24 @@
 public class GeneralPractitioner extends HealthProfessional {
-    private String professional;
+    private String GeneralPractitioners;
 
     public GeneralPractitioner(){
         super();
-        this.professional = "General Doctor";
+        this.GeneralPractitioners = "General Doctor";
     }
-    public GeneralPractitioner(int id,String name, String department,String professional) {
+    public GeneralPractitioner(int id,String name, String department,String GeneralPractitioners) {
         super(id, name, department);
-        this.professional = professional;
+        this.GeneralPractitioners = GeneralPractitioners;
     }
     @Override
     public void printDetails(){
         System.out.println("Details:");
         super.printDetails();
-        System.out.println("professional:" + professional);
+        System.out.println("GeneralPractitioners:" + GeneralPractitioners);
     }
-    public String getProfessional(){
-        return professional;
+    public String getGeneralPractitioners(){
+        return GeneralPractitioners;
     }
-    public void setProfessional(String professional) {
-        this.professional = professional;
+    public void setGeneralPractitioners(String GeneralPractitioners) {
+        this.GeneralPractitioners = GeneralPractitioners;
     }
 }
