@@ -37,7 +37,21 @@ public class AssignmentOne {
 
         Specialist sp2 = new Specialist();
         sp2.printDetails();
-        
+        System.out.println("----------------");
+
+        //
+        //
+        Appointment appointment1 = new Appointment("Yuri", "1234567", "8:00", gp1);
+        appointment1.printDetails();
+        System.out.println("----------------");
+
+        Appointment appointment2 = new Appointment("Jiao", "0987654", "10:00", sp1);
+        appointment2.printDetails();
+        System.out.println("----------------");
+
+        Appointment appointment3 = new Appointment();
+        appointment3.printDetails();
+        System.out.println("----------------");
 
     }
 }
