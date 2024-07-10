@@ -37,7 +37,7 @@ public class AssignmentOne {
 
         Specialist sp2 = new Specialist();
         sp2.printDetails();
-
+        
 
     }
 }
