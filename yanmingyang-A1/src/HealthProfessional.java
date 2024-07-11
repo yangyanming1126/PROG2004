@@ -1,3 +1,6 @@
+/**
+ * 健康专业人士的父类
+ */
 public class HealthProfessional {
     private int id;
     private String name;
@@ -7,7 +10,6 @@ public class HealthProfessional {
         this.id = 123456;
         this.name = "Alex";
         this.department = "eyes";
-
     }
 
     public HealthProfessional(int id, String name, String department) {
@@ -50,7 +52,7 @@ public class HealthProfessional {
     public String toString() {
         return "HealthProfessional{" +
                 "id=" + id +
-                ", name='" + name +'\'' +
+                ", name='" + name + '\'' +
                 ", department='" + department + '\'' +
                 '}';
     }
