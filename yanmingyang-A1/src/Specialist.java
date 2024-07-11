@@ -1,3 +1,6 @@
+/**
+ * 专业人士类型
+ */
 public class Specialist extends HealthProfessional {
     private String field;
 
@@ -25,6 +28,7 @@ public class Specialist extends HealthProfessional {
     public void setField(String field) {
         this.field = field;
     }
+
     @Override
     public String toString() {
         return "Specialist{" +

@@ -15,7 +15,6 @@ public class Patient {
 
     public String getPatientName() {
         return patientName;
-
     }
 
     public void setPatientName(String patientName) {
