@@ -1,5 +1,5 @@
 /**
- * 全科医生
+ * General practitioners
  */
 public class GeneralPractitioner extends HealthProfessional {
     private String GeneralPractitioners;

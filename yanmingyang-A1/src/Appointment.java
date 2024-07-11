@@ -1,55 +1,56 @@
 import java.time.LocalDateTime;
 
+/**
+ * Create a class to accommodate patient appointments
+ */
+public class Appointment {
+    private Patient patient;
+
     /**
-     * 创建一个类来容纳患者预约
+     * Make an appointment
      */
-    public class Appointment {
-        private Patient patient;
+    public String timeOfAppointment;
 
-        /**
-         * 预约时间
-         */
-        public String timeOfAppointment;
+    /**
+     * The doctor of choice
+     */
+    private HealthProfessional doctor;
 
-        /**
-         * 选择的医生
-         */
-        private HealthProfessional doctor;
+    public Appointment() {
+        this.patient = new Patient("Annie", "13147712718");
+        this.doctor = null;
+    }
 
-        public Appointment() {
-            this.patient = new Patient("Annie", "13147712718");
-            this.doctor = null;
-        }
+    public Appointment(Patient patient, String timeOfAppointment, HealthProfessional doctor) {
+        this.patient = patient;
+        this.timeOfAppointment = timeOfAppointment;
+        this.doctor = doctor;
+    }
 
-        public Appointment(Patient patient, String timeOfAppointment, HealthProfessional doctor) {
-            this.patient = patient;
-            this.timeOfAppointment = timeOfAppointment;
-            this.doctor = doctor;
-        }
-
-        public void printDetails() {
-            System.out.println(this.patient);
-            System.out.println("预约时间："+this.timeOfAppointment);
-            if (doctor != null) {
-                doctor.printDetails();
-            } else {
-                System.out.println("Doctor: Not assigned");
-            }
-        }
-
-        public Patient getPatient() {
-            return patient;
-        }
-
-        public void setPatient(Patient patient) {
-            this.patient = patient;
-        }
-
-        public HealthProfessional getDoctor() {
-            return doctor;
-        }
-
-        public void setDoctor(HealthProfessional doctor) {
-            this.doctor = doctor;
+    public void printDetails() {
+        System.out.println(this.patient);
+        System.out.println("Make an appointment："+this.timeOfAppointment);
+        if (doctor != null) {
+            doctor.printDetails();
+        } else {
+            System.out.println("Doctor: Not assigned");
         }
     }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    public HealthProfessional getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(HealthProfessional doctor) {
+        this.doctor = doctor;
+    }
+}
+

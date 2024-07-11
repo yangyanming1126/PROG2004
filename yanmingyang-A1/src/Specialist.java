@@ -1,5 +1,5 @@
 /**
- * 专业人士类型
+ * Type of professional
  */
 public class Specialist extends HealthProfessional {
     private String field;

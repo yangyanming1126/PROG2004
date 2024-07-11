@@ -1,5 +1,5 @@
 /**
- * 健康专业人士的父类
+ * Parent class of health professionals
  */
 public class HealthProfessional {
     private int id;

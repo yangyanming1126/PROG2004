@@ -8,8 +8,8 @@ public class Util {
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy/M/d HH:mm");
 
     /**
-     * 获取当前时间，格式为yyyy/M/d HH
-     * @return 格式化后的当前时间字符串
+     * Gets the current time in yyyy/M/d HH
+     * @return Formatted current time string
      */
     public static String getCurrentTime() {
         LocalDateTime now = LocalDateTime.now();
@@ -17,24 +17,24 @@ public class Util {
     }
 
     /**
-     * 获取未来15天内的任意一天的时间，格式为yyyy/M/d HH
-     * @return 格式化后的未来任意一天的时间字符串
+     * Get the time for any day in the next 15 days in the format of yyyy/M/d HH
+     * @return A time string for any future day after formatting
      */
     public static String getRandomFutureTimeWithin15Days() {
         LocalDateTime now = LocalDateTime.now();
-        int randomDays = ThreadLocalRandom.current().nextInt(1, 16); // 随机生成1到15之间的天数
-        int randomHour = ThreadLocalRandom.current().nextInt(9, 19); // 随机生成9到18之间的小时
-        int randomMinute = ThreadLocalRandom.current().nextBoolean() ? 0 : 30; // 随机生成0或30作为分钟
+        int randomDays = ThreadLocalRandom.current().nextInt(1, 16); // The number of days between 1 and 15 is randomly generated
+        int randomHour = ThreadLocalRandom.current().nextInt(9, 19); // Randomly generated hours between 9 and 18
+        int randomMinute = ThreadLocalRandom.current().nextBoolean() ? 0 : 30; // 0 or 30 minutes are randomly generated
 
         LocalDateTime futureDate = now.plusDays(randomDays).withHour(randomHour).withMinute(randomMinute).withSecond(0).withNano(0);
         return futureDate.format(FORMATTER);
     }
 
     public static void main(String[] args) {
-        // 打印当前时间
-        System.out.println("当前时间: " + getCurrentTime());
+        // Prints the current time
+        System.out.println("The current time: " + getCurrentTime());
 
-        // 打印未来15天内的任意一天的时间
-        System.out.println("未来15天内的任意一天时间: " + getRandomFutureTimeWithin15Days());
+        // Print the time of any day in the next 15 days
+        System.out.println("Any day in the next 15 days: " + getRandomFutureTimeWithin15Days());
     }
 }
