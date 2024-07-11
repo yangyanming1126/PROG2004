@@ -1,4 +1,4 @@
-public class Specialist extends HealthProfessional{
+public class Specialist extends HealthProfessional {
     private String field;
 
     public Specialist() {
@@ -10,17 +10,25 @@ public class Specialist extends HealthProfessional{
         super(id, name, department);
         this.field = field;
     }
+
     @Override
     public void printDetails() {
-        System.out.println("Details:");
+        System.out.println("The professional personnel details are:");
         super.printDetails();
         System.out.println("Field:" + field);
     }
-    public String getField(){
+
+    public String getField() {
         return field;
     }
 
     public void setField(String field) {
         this.field = field;
+    }
+    @Override
+    public String toString() {
+        return "Specialist{" +
+                "field='" + field + '\'' +
+                '}';
     }
 }
